@@ -64,7 +64,7 @@ class _DashboardState extends State<Dashboard> {
                     child : Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        color: Color(0xFF485fa9),
+                        color: Color(0x4D485fa9),//to bass aise hi krta jaa changes 
                         boxShadow: [
                           new BoxShadow(
                               color: Color(0x4D000000),
