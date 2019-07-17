@@ -52,132 +52,86 @@ class _DashboardState extends State<Dashboard> {
             Container(
               height: 10,
             ),
-            PageView(
-              children: <Widget>[
-              Container(
-                width: 380,
-                height: 260,
-                child: Stack(
-                  children: <Widget>[
-                    new Align(
-                      alignment: Alignment.centerRight,
-                      child: Container(
-                        height: 260,
-                        width: 370,
-                        child: Stack(
-                          children: <Widget>[
-                            new Align(
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  color: Color(0x4D485fa9),
-                                  boxShadow: [
-                                    new BoxShadow(
-                                        color: Color(0x4D000000),
-                                        offset: new Offset(0.0, 5.0),
-                                        blurRadius: 20.0,
-                                        spreadRadius: 1)
-                                  ],
-                                ),
-                                height: 180,
-                                width: 350,
-                              ),
-                            ),
-                            new Align(
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  color: Color(0xFF485fa9),
-                                  boxShadow: [
-                                    new BoxShadow(
-                                        color: Color(0x4D000000),
-                                        offset: new Offset(0.0, 5.0),
-                                        blurRadius: 20.0,
-                                        spreadRadius: 1)
-                                  ],
-                                ),
-                                height: 200,
-                                width: 120,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-
             Container(
-                  width: 380,
-                  height: 260,
-                  child: Stack(
-                    children: <Widget>[
-                      new Align(
-                        alignment: Alignment.centerRight,
-                        child: Container(
-                          height: 260,
-                          width: 370,
-                          child: Stack(
-                            children: <Widget>[
-                              new Align(
-                                alignment: Alignment.centerLeft,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    color: Color(0x4D485fa9),
-                                    boxShadow: [
-                                      new BoxShadow(
-                                          color: Color(0x4D000000),
-                                          offset: new Offset(0.0, 5.0),
-                                          blurRadius: 20.0,
-                                          spreadRadius: 1)
-                                    ],
-                                  ),
-                                  height: 180,
-                                  width: 350,
-                                ),
-                              ),
-                              new Align(
-                                alignment: Alignment.centerLeft,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    color: Color(0xFF485fa9),
-                                    boxShadow: [
-                                      new BoxShadow(
-                                          color: Color(0x4D000000),
-                                          offset: new Offset(0.0, 5.0),
-                                          blurRadius: 20.0,
-                                          spreadRadius: 1)
-                                    ],
-                                  ),
-                                  height: 200,
-                                  width: 120,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      CircleAvatar(
-                        radius: 50,
-                        backgroundColor: Colors.white,
-                      ),
-                    ],
-                  ),
-                ),
-  ],
-            scrollDirection: Axis.horizontal,),
+              height: 270,
+              child: PageView(
+                controller: PageController(viewportFraction: 0.9),
+                children: <Widget>[
+                  TCards(),
+                  TCards(),
+                  TCards(),
+                ],
+              ),
+            )
           ],
         ),
       ),
     );
   }
+}
+
+class TCards extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 380,
+      height: 260,
+      child: Stack(
+        children: <Widget>[
+          new Align(
+            alignment: Alignment.centerRight,
+            child: Container(
+              height: 260,
+              width: 360,
+              child: Stack(
+                children: <Widget>[
+                  new Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Color(0x4D485fa9),
+                        boxShadow: [
+                          new BoxShadow(
+                              color: Color(0x4D000000),
+                              offset: new Offset(0.0, 5.0),
+                              blurRadius: 20.0,
+                              spreadRadius: 1)
+                        ],
+                      ),
+                      height: 180,
+                      width: 350,
+                    ),
+                  ),
+                  new Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Color(0xFF485fa9),
+                        boxShadow: [
+                          new BoxShadow(
+                              color: Color(0x4D000000),
+                              offset: new Offset(0.0, 5.0),
+                              blurRadius: 20.0,
+                              spreadRadius: 1)
+                        ],
+                      ),
+                      height: 200,
+                      width: 120,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          CircleAvatar(
+            radius: 50,
+            backgroundColor: Colors.white,
+          ),
+        ],
+      ),
+    );
+  }
+
 }
