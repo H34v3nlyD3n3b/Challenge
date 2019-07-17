@@ -32,7 +32,6 @@ class _DashboardState extends State<Dashboard> {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 40,
-
                 ),
               ),
             ),
@@ -48,58 +47,67 @@ class _DashboardState extends State<Dashboard> {
                   fontSize: 25,
                   color: Colors.white,
                 ),
-
               ),
             ),
             Container(
               height: 10,
             ),
             Container(
-              width: 390,
+              width: 380,
               height: 260,
               child: Stack(
                 children: <Widget>[
-
-                  new Align(alignment: Alignment.centerLeft,
-                    child : Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Color(0x4D485fa9),//to bass aise hi krta jaa changes 
-                        boxShadow: [
-                          new BoxShadow(
-                              color: Color(0x4D000000),
-                              offset: new Offset(0.0, 5.0),
-                              blurRadius: 20.0,
-                              spreadRadius: 1)
-                        ],//gitkraken khol abb
-                        
+                  new Align(
+                    alignment: Alignment.centerRight,
+                    child: Container(
+                      height: 260,
+                      width: 370,
+                      child: Stack(
+                        children: <Widget>[
+                          new Align(
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Color(0x4D485fa9),
+                                boxShadow: [
+                                  new BoxShadow(
+                                      color: Color(0x4D000000),
+                                      offset: new Offset(0.0, 5.0),
+                                      blurRadius: 20.0,
+                                      spreadRadius: 1)
+                                ],
+                              ),
+                              height: 180,
+                              width: 350,
+                            ),
+                          ),
+                          new Align(
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Color(0xFF485fa9),
+                                boxShadow: [
+                                  new BoxShadow(
+                                      color: Color(0x4D000000),
+                                      offset: new Offset(0.0, 5.0),
+                                      blurRadius: 20.0,
+                                      spreadRadius: 1)
+                                ],
+                              ),
+                              height: 200,
+                              width: 120,
+                            ),
+                          ),
+                        ],
                       ),
-                      height: 180,
-                      width: 360,
-
-                    ),),
-
-                  new Align(alignment: Alignment.centerLeft,
-                  child : Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Color(0xFF485fa9),
-                      boxShadow: [
-                        new BoxShadow(
-                            color: Color(0x4D000000),
-                            offset: new Offset(0.0, 5.0),
-                            blurRadius: 20.0,
-                            spreadRadius: 1)
-                      ],
                     ),
-                    height: 200,
-                    width: 120,
-                  ),),
+                  ),
                   CircleAvatar(
                     radius: 50,
                     backgroundColor: Colors.white,
                   ),
-
                 ],
               ),
             )
