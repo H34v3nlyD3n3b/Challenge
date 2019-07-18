@@ -26,11 +26,17 @@ class _DashboardState extends State<Dashboard> {
           children: <Widget>[
             Container(
               height: 750,
-              child: PageView(
+              child: ListView(
                 children: <Widget>[
-                  Objects(),
+                 Explore(),
+                 Gap1(),
+                  Trending(),
+                  Gap2(),
+                  HCards(),
+                  Latests(),
+                  Gap3(),
+                  VCards(),
                 ],
-                scrollDirection: Axis.vertical,
               ),
             ),
           ],
@@ -40,78 +46,114 @@ class _DashboardState extends State<Dashboard> {
   }
 }
 
-class Objects extends StatelessWidget {
+class Explore extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+      margin: const EdgeInsets.all(10.0),
+      alignment: Alignment.topCenter,
+      child: Text(
+        'Explore',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 30,
+        ),
+      ),
+    ) ;
+  }
+}
+class Gap1 extends StatelessWidget{
+ @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 20,
+    );
+  }
+}
+class Trending extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
+      width: 370,
+      alignment: Alignment.centerLeft,
+      child: Text(
+        'Trending',
+        style: TextStyle(
+          fontSize: 25,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+class Gap2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      height: 10,
+    );
+  }
+}
+class HCards extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      height: 270,
+      child: PageView(
+        controller: PageController(viewportFraction: 0.9),
         children: <Widget>[
-          Container(
-            margin: const EdgeInsets.all(10.0),
-            alignment: Alignment.topCenter,
-            child: Text(
-              'Explore',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-              ),
-            ),
-          ),
-          Container(
-            height: 20,
-          ),
-          Container(
-            width: 370,
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Trending',
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          Container(
-            height: 10,
-          ),
-          Container(
-            height: 270,
-            child: PageView(
-              controller: PageController(viewportFraction: 0.9),
-              children: <Widget>[
-                TCards(),
-                TCards(),
-                TCards(),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25.0),
-            child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Latests',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
-                ),
-              ),
-            ),
-          ),
-          SizedBox(height: 10),
-          Container(
-            height: 320,
-            child: PageView(
-              controller: PageController(viewportFraction: 0.9),
-              children: <Widget>[
-                LCards(),
-                LCards(),
-                LCards(),
-              ],
-              scrollDirection: Axis.vertical,
-            ),
-          ),
+          TCards(),
+          TCards(),
+          TCards(),
         ],
+      ),
+    );
+  }
+}
+class Latests extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Padding(
+      padding: const EdgeInsets.only(left: 25.0),
+      child: Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          'Latests',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+          ),
+        ),
+      ),
+    );
+  }
+}
+class Gap3 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return SizedBox(height: 10);
+  }
+}
+class VCards extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      height: 320,
+      child: PageView(
+        controller: PageController(viewportFraction: 0.9),
+        children: <Widget>[
+          LCards(),
+          LCards(),
+          LCards(),
+          LCards(),
+          LCards(),
+        ],
+        scrollDirection: Axis.vertical,
       ),
     );
   }
