@@ -35,7 +35,10 @@ class _DashboardState extends State<Dashboard> {
                   HCards(),
                   Latests(),
                   Gap3(),
-                  VCards(),
+                  LCards(),
+                  LCards(),
+                  LCards(),
+                  LCards(),
                 ],
               ),
             ),
@@ -138,7 +141,7 @@ class Gap3 extends StatelessWidget{
     return SizedBox(height: 10);
   }
 }
-class VCards extends StatelessWidget{
+/*class VCards extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -157,7 +160,7 @@ class VCards extends StatelessWidget{
       ),
     );
   }
-}
+}*/
 
 class TCards extends StatelessWidget {
   @override
